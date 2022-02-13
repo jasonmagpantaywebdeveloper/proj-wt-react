@@ -1,0 +1,67 @@
+$font-size: 16px;
+$base-font-color: #323232;
+$base-spacing: 8px;
+
+$screen-xs: 0;
+$screen-xs-max: 599px;
+$screen-sm: 600px;
+$screen-md: 900px;
+$screen-lg: 1280px;
+$screen-xl: 1920px;
+
+// mixin mediaqueries: breakpoint value;
+@mixin media($point: xs, $isLandscape: false) {
+  @if ($point == xl and $isLandscape == false) {
+    @media screen and (min-width: $screen-xl) {
+      @content;
+    }
+  }
+  @else if ($point == xl and $isLandscape == true) {
+    @media screen and (min-width: $screen-xl) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if ($point == lg and $isLandscape == false) {
+    @media screen and (min-width: $screen-lg) {
+      @content;
+    }
+  }
+  @else if ($point == lg and $isLandscape == true) {
+    @media screen and (min-width: $screen-lg) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if ($point == md and $isLandscape == false) {
+    @media screen and (min-width: $screen-md) {
+      @content;
+    }
+  }
+  @else if ($point == md and $isLandscape == true) {
+    @media screen and (min-width: $screen-md) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if ($point == sm and $isLandscape == false) {
+    @media screen and (min-width: $screen-sm) {
+      @content;
+    }
+  }
+  @else if ($point == sm and $isLandscape == true) {
+    @media screen and (min-width: $screen-sm) and (orientation: landscape) {
+      @content;
+    }
+  }
+  @else if ($point == xs and $isLandscape == false) {
+    @media screen and (max-width: $screen-xs-max) {
+      @content;
+    }
+  }
+  @else if($point == xs and $isLandscape == true) {
+    @media screen and (max-width: $screen-xs-max) and (orientation: landscape) {
+      @content;
+    }
+  }
+}

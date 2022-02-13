@@ -1,0 +1,105 @@
+@import "../../variables";
+
+.wt-table {
+  display: flex;
+  margin-bottom: $base-spacing * 4;
+
+  .wt-clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: $base-spacing * 2;
+
+    p {
+      margin: $base-spacing 0;
+    }
+  }
+
+  .wt-table--contents {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .wt-plot {
+    width: 100%;
+    margin-right: $base-spacing * 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .wt-plot--body {
+      display: flex;
+      flex-direction: column;;
+      justify-content: flex-end;
+    }
+
+    .wt-plot--row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 30px;
+      margin-bottom: calc($base-spacing / 2);
+
+      .wt-plot--subheader-labels {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+
+        p {
+          position: absolute;
+          color: #ababab;
+          &:first-of-type {
+            left: -5%;
+          }
+          &:last-of-type {
+            right: -5%;
+          }
+        }
+      }
+    }
+
+    .wt-plot--cell {
+      display: flex;
+      height: 30px;
+
+      &.plot {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      &.label {
+        display: flex;
+        align-items: center;
+        margin-right: $base-spacing;
+        width: 30px;
+      }
+
+      .wt-plot--item {
+        width: 100%;
+        height: 100%;
+        background: #efefef;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        span {
+          width: $base-spacing;
+          height: $base-spacing;
+          border-radius: 50%;
+          background-color: #5e8cf6;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .wt-table--content {
+    margin-right: $base-spacing * 2;
+    width: 100%;
+  }
+}
